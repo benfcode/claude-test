@@ -24,6 +24,72 @@ header {
 
 header h1 {
     font-size: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header h1:hover {
+    color: #e94560;
+}
+
+header h1::before,
+header h1::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    opacity: 0;
+    pointer-events: none;
+}
+
+header h1::before {
+    top: -5px;
+    right: -10px;
+    box-shadow:
+        0 0 4px 2px #fff,
+        0 0 8px 4px #e94560;
+    border-radius: 50%;
+}
+
+header h1::after {
+    bottom: -5px;
+    left: -10px;
+    box-shadow:
+        0 0 4px 2px #fff,
+        0 0 8px 4px #e94560;
+    border-radius: 50%;
+}
+
+header h1:hover::before {
+    animation: sparkle1 0.6s ease-in-out infinite;
+}
+
+header h1:hover::after {
+    animation: sparkle2 0.6s ease-in-out 0.3s infinite;
+}
+
+@keyframes sparkle1 {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+@keyframes sparkle2 {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(-180deg);
+    }
 }
 
 nav a {
