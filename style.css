@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #D7BA89;
+    background-color: #ffffff;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -114,7 +114,7 @@ main {
 }
 
 #game-container {
-    background-color: #D7BA89;
+    background-color: #ffffff;
     border-radius: 8px;
     padding: 3rem;
     text-align: center;
@@ -132,7 +132,7 @@ main {
 }
 
 footer {
-    background-color: #D7BA89;
+    background-color: #ffffff;
     padding: 1rem 2rem;
     text-align: center;
     color: #888;
