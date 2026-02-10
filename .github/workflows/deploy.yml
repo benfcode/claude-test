@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [claude/add-claude-md-l7Xok]
+    branches: [claude/add-claude-md-l7Xok, claude/add-header-button-borders-U4ow8]
   workflow_dispatch:
 
 permissions:
