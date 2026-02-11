@@ -142,6 +142,23 @@ main {
     color: #666;
 }
 
+.game-subtitle {
+    margin-bottom: 1rem;
+}
+
+#canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+#golf-canvas {
+    border-radius: 8px;
+    cursor: crosshair;
+    max-width: 100%;
+    display: block;
+}
+
 footer {
     background-color: #ffffff;
     padding: 1rem 2rem;
