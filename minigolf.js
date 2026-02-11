@@ -953,15 +953,15 @@
     }
 
     function handlePointerMove(e) {
+        if (!isDragging) return;
         e.preventDefault();
-        if (isDragging) {
-            dragEnd = getCanvasPos(e);
-        }
+        dragEnd = getCanvasPos(e);
     }
 
     function handlePointerUp(e) {
+        if (!isDragging) return;
         e.preventDefault();
-        if (isDragging && gameState === 'aiming') {
+        if (gameState === 'aiming') {
             isDragging = false;
             var pos = getCanvasPos(e);
             dragEnd = pos;
@@ -983,11 +983,11 @@
     }
 
     canvas.addEventListener('mousedown', handlePointerDown);
-    canvas.addEventListener('mousemove', handlePointerMove);
-    canvas.addEventListener('mouseup', handlePointerUp);
+    document.addEventListener('mousemove', handlePointerMove);
+    document.addEventListener('mouseup', handlePointerUp);
     canvas.addEventListener('touchstart', handlePointerDown, { passive: false });
-    canvas.addEventListener('touchmove', handlePointerMove, { passive: false });
-    canvas.addEventListener('touchend', handlePointerUp, { passive: false });
+    document.addEventListener('touchmove', handlePointerMove, { passive: false });
+    document.addEventListener('touchend', handlePointerUp, { passive: false });
 
     // ---------- Game Control ----------
 
